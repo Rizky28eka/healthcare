@@ -1,4 +1,7 @@
 import 'package:care/pages/home/home_page.dart';
+import 'package:care/pages/notification/notification_page.dart';
+import 'package:care/pages/profile/Profile_page.dart';
+import 'package:care/pages/reports/report_page.dart';
 import 'package:care/utils/color.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
@@ -18,9 +21,9 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   // List halaman yang akan ditampilkan
   final List<Widget> pages = [
     HomePage(),
-    // ReportPage(),
-    // NotificationPage(),
-    // ProfilePage(),
+    ReportPage(),
+    NotificationPage(),
+    ProfilePage(),
   ];
 
   @override

@@ -1,7 +1,7 @@
-import 'package:care/pages/home/custom/article_card_widget.dart';
-import 'package:care/pages/home/custom/seaction_header_widget.dart';
-import 'package:care/pages/home/custom/shortcut_gridview.dart';
-import 'package:care/pages/home/custom/top_doctor_card_view.dart';
+import 'package:care/pages/home/Widgets/article_card_widget.dart';
+import 'package:care/pages/home/Widgets/seaction_header_widget.dart';
+import 'package:care/pages/home/Widgets/shortcut_gridview.dart';
+import 'package:care/pages/home/Widgets/top_doctor_card_view.dart';
 import 'package:care/pages/notification/notification_page.dart';
 import 'package:care/utils/color.dart';
 import 'package:care/widgets/search_bar_widget.dart';
@@ -64,10 +64,11 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               icon: const Icon(Icons.notifications),
               onPressed: () {
-                // Pindah ke halaman notifikasi
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NotificationPage()),
+                  MaterialPageRoute(
+                    builder: (context) => const NotificationPage(),
+                  ),
                 );
               },
             ),
