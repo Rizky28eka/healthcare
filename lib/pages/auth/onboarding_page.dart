@@ -29,8 +29,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
       key: introKey,
       globalBackgroundColor: primaryColor,
       skipStyle: ButtonStyle(
-        textStyle: MaterialStateProperty.all(const TextStyle(fontSize: 17)),
-        foregroundColor: MaterialStateProperty.all(buttonColor),
+        textStyle: WidgetStateProperty.all(const TextStyle(fontSize: 17)),
+        foregroundColor: WidgetStateProperty.all(buttonColor),
       ),
       pages: [
         OnboardingPageWidget(
@@ -67,7 +67,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       ),
       onDone: () => _onIntroEnd(context),
       nextStyle: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all(buttonColor),
+        foregroundColor: WidgetStateProperty.all(buttonColor),
       ),
       dotsDecorator: const DotsDecorator(
         size: Size.square(10),

@@ -54,7 +54,7 @@ class ShortcutGridView extends StatelessWidget {
                     child: Container(
                       width: 60.0,
                       height: 60.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white,
                       ),

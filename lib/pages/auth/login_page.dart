@@ -106,7 +106,8 @@ class _LoginPageState extends State<LoginPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => CustomBottomNavBar(),
+                                builder: (context) =>
+                                    const CustomBottomNavBar(),
                               ),
                             );
                           },
@@ -129,23 +130,6 @@ class _LoginPageState extends State<LoginPage> {
                           text: 'Continue With Google',
                         ),
                         SizedBox(height: size.width * 0.05),
-                        BtnTxtWidget(
-                          icon: const FaIcon(
-                            FontAwesomeIcons.apple,
-                            color: Colors.white,
-                          ),
-                          onPressed: () {},
-                          text: 'Continue With Google',
-                        ),
-                        SizedBox(height: size.width * 0.05),
-                        BtnTxtWidget(
-                          icon: const FaIcon(
-                            FontAwesomeIcons.facebook,
-                            color: Colors.white,
-                          ),
-                          onPressed: () {},
-                          text: 'Continue With Facebook',
-                        ),
                         SizedBox(height: size.width * 0.05),
                         TextButton(
                           onPressed: () {

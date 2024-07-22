@@ -20,10 +20,10 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
 
   // List halaman yang akan ditampilkan
   final List<Widget> pages = [
-    HomePage(),
-    ReportPage(),
-    NotificationPage(),
-    ProfilePage(),
+    const HomePage(),
+    const ReportPage(),
+    const NotificationPage(),
+    const ProfilePage(),
   ];
 
   @override

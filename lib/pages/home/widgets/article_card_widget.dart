@@ -28,7 +28,7 @@ List<Article> mockArticles = [
 class ArticleCard extends StatelessWidget {
   final Article article;
 
-  const ArticleCard({required this.article, Key? key}) : super(key: key);
+  const ArticleCard({required this.article, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class ArticleCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15.0),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             blurRadius: 8.0,
@@ -89,7 +89,7 @@ class ArticleCard extends StatelessWidget {
 }
 
 class ArticleListView extends StatelessWidget {
-  const ArticleListView({Key? key}) : super(key: key);
+  const ArticleListView({super.key});
 
   @override
   Widget build(BuildContext context) {

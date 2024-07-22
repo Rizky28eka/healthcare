@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "849271738337",
+    "firebase_url": "https://healthcare-f91fb-default-rtdb.firebaseio.com",
+    "project_id": "healthcare-f91fb",
+    "storage_bucket": "healthcare-f91fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849271738337:android:54e652de699e6762b18ca0",
+        "android_client_info": {
+          "package_name": "com.example.care"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArIOgSC4pDpvM5fZBjjXWvSb8w_YInlY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

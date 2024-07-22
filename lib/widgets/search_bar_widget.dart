@@ -16,6 +16,8 @@ class SearchController extends GetxController {
 class SearchBarWidget extends StatelessWidget {
   final SearchController searchController = Get.put(SearchController());
 
+  SearchBarWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +29,7 @@ class SearchBarWidget extends StatelessWidget {
             color: Colors.black.withOpacity(0.1),
             spreadRadius: 2,
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
