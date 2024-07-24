@@ -66,14 +66,12 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                   const TxtFieldWidget(
                     hintText: "New Password",
                     icon: Icons.lock,
-                    obscureText: true,
                     keyboardType: TextInputType.visiblePassword,
                   ),
                   SizedBox(height: size.width * 0.05),
                   const TxtFieldWidget(
                     hintText: "Confirm New Password",
                     icon: Icons.lock,
-                    obscureText: true,
                     keyboardType: TextInputType.visiblePassword,
                   ),
                   SizedBox(height: size.width * 0.10),
@@ -95,7 +93,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                                     Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => const LoginPage(),
+                                        builder: (context) =>  LoginPage(),
                                       ),
                                     );
                                   },

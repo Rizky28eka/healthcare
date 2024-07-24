@@ -18,7 +18,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
   void _onIntroEnd(BuildContext context) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => const LoginPage(),
+        builder: (context) => LoginPage(),
       ),
     );
   }

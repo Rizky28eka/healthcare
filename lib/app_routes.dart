@@ -1,20 +1,28 @@
+import 'package:get/get.dart';
+import 'package:care/pages/auth/forgot_password_page.dart';
+import 'package:care/pages/auth/login_page.dart';
 import 'package:care/pages/auth/splash_page.dart';
 import 'package:care/pages/home/home_page.dart';
+import 'package:care/pages/notification/notification_page.dart';
 import 'package:care/pages/profile/profile_page.dart';
-import 'package:get/get.dart';
-import 'package:care/widgets/bottom_nav_bar.dart';
 
 class AppRoutes {
-  static const String splashPage = '/splash_page';
-  static const String bottomNavBar = '/bottom_nav_bar';
-  static const String home = '/home';
-  static const String profile = '/profile';
-  static const String settings = '/settings';
+  // Define route names
+  static const splashPage = '/splash';
+  static const homePage = '/home';
+  static const profilePage = '/profile';
+  static const loginPage = '/login';
+  static const registerPage = '/register';
+  static const notificationPage = '/notification';
+  static const forgotPasswordPage = '/forgot-password';
 
+  // Define route map
   static final routes = [
     GetPage(name: splashPage, page: () => const SplashPage()),
-    GetPage(name: bottomNavBar, page: () => const CustomBottomNavBar()),
-    GetPage(name: home, page: () => const HomePage()),
-    GetPage(name: profile, page: () => const ProfilePage()),
+    GetPage(name: homePage, page: () => const HomePage()),
+    GetPage(name: profilePage, page: () => const ProfilePage()),
+    GetPage(name: loginPage, page: () => LoginPage()),
+    GetPage(name: notificationPage, page: () => NotificationPage()),
+    GetPage(name: forgotPasswordPage, page: () => ForgotPasswordPage()),
   ];
 }

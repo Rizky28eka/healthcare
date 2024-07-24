@@ -4,19 +4,22 @@ import 'package:flutter/material.dart';
 class BtnTxtWidget extends StatefulWidget {
   final String? text;
   final Widget? icon;
-  final VoidCallback? onPressed;
   final TextInputType? keyboardType;
+  final VoidCallback? onPressed;
+  final bool isLoading; // Tambahkan parameter isLoading
+  final ValueChanged<String>? onChanged; // Tambahkan parameter onChanged
 
   const BtnTxtWidget({
     super.key,
     this.text,
     this.icon,
     required this.onPressed,
+    this.isLoading = false, // Default value for isLoading
+    this.onChanged,
     this.keyboardType,
   });
 
   @override
-  // ignore: library_private_types_in_public_api
   _BtnTxtWidgetState createState() => _BtnTxtWidgetState();
 }
 
@@ -47,16 +50,23 @@ class _BtnTxtWidgetState extends State<BtnTxtWidget> {
         valueListenable: _isEnabledNotifier,
         builder: (context, isEnabled, child) {
           return ElevatedButton(
-            onPressed: isEnabled ? widget.onPressed : null,
+            onPressed: !widget.isLoading && isEnabled ? widget.onPressed : null,
             style: ElevatedButton.styleFrom(
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-              backgroundColor: isEnabled ? buttonColor : Colors.grey,
+              backgroundColor:
+                  !widget.isLoading && isEnabled ? buttonColor : Colors.grey,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),
             ),
-            child: Center(child: _buildButtonContent()),
+            child: Center(
+              child: widget.isLoading
+                  ? const CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                    )
+                  : _buildButtonContent(),
+            ),
           );
         },
       ),
